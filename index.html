@@ -343,21 +343,20 @@
             font-size: 17px; color: var(--text-muted);
             line-height: 1.6;
         }
-        .dresscode-colors {
-            display: flex; align-items: center; justify-content: center; gap: 12px;
-            margin-top: 20px;
+        .dresscode-figures {
+            display: flex; align-items: flex-end; justify-content: center; gap: 32px;
+            margin-top: 28px;
         }
-        .color-swatch {
-            width: 28px; height: 28px; border-radius: 50%;
-            border: 2px solid rgba(201,168,76,0.3);
-            position: relative;
+        .dresscode-figure { text-align: center; }
+        .dresscode-figure svg {
+            width: 70px; height: 120px;
+            filter: drop-shadow(0 4px 12px rgba(201,168,76,0.1));
         }
-        .color-swatch::after {
-            content: attr(data-label);
-            position: absolute; bottom: -18px; left: 50%; transform: translateX(-50%);
-            font-size: 7px; letter-spacing: 1px; text-transform: uppercase;
-            color: var(--text-muted); white-space: nowrap;
-            font-family: 'Montserrat', sans-serif; font-weight: 300;
+        .dresscode-figure-label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200; font-size: 8px;
+            letter-spacing: 3px; text-transform: uppercase;
+            color: var(--text-muted); margin-top: 10px;
         }
 
         /* ── Location ── */
@@ -599,12 +598,51 @@
                     Damas: vestido largo o cocktail
                 </p>
 
-                <div class="dresscode-colors">
-                    <div class="color-swatch" style="background: #1a1a2e;" data-label="Negro"></div>
-                    <div class="color-swatch" style="background: #2d2d3f;" data-label="Oscuro"></div>
-                    <div class="color-swatch" style="background: #C9A84C;" data-label="Dorado"></div>
-                    <div class="color-swatch" style="background: #8B0000;" data-label="Vino"></div>
-                    <div class="color-swatch" style="background: #F5F0E8;" data-label="Marfil"></div>
+                <div class="dresscode-figures">
+                    <div class="dresscode-figure">
+                        <svg viewBox="0 0 70 120" fill="none">
+                            <!-- Man in suit -->
+                            <circle cx="35" cy="16" r="10" fill="rgba(201,168,76,0.7)"/>
+                            <!-- Jacket -->
+                            <path d="M20 38 L15 95 L30 95 L30 55 L35 42 L40 55 L40 95 L55 95 L50 38 L44 30 L35 34 L26 30 Z" fill="rgba(201,168,76,0.5)"/>
+                            <!-- Lapels -->
+                            <path d="M30 34 L35 50 L32 34 Z" fill="rgba(201,168,76,0.7)"/>
+                            <path d="M40 34 L35 50 L38 34 Z" fill="rgba(201,168,76,0.7)"/>
+                            <!-- Tie -->
+                            <path d="M33.5 34 L35 55 L36.5 34 Z" fill="rgba(201,168,76,0.9)"/>
+                            <!-- Shirt collar -->
+                            <path d="M30 30 L35 36 L40 30" fill="none" stroke="rgba(201,168,76,0.6)" stroke-width="0.8"/>
+                            <!-- Pants -->
+                            <path d="M22 95 L20 115 L28 115 L30 95 Z" fill="rgba(201,168,76,0.35)"/>
+                            <path d="M40 95 L42 115 L50 115 L48 95 Z" fill="rgba(201,168,76,0.35)"/>
+                            <!-- Pocket square -->
+                            <path d="M42 42 L46 38 L46 44 Z" fill="rgba(201,168,76,0.8)"/>
+                        </svg>
+                        <p class="dresscode-figure-label">Caballero</p>
+                    </div>
+                    <div class="dresscode-figure">
+                        <svg viewBox="0 0 70 120" fill="none">
+                            <!-- Woman in dress -->
+                            <circle cx="35" cy="16" r="10" fill="rgba(201,168,76,0.7)"/>
+                            <!-- Hair hint -->
+                            <path d="M26 12 Q25 6 30 4 Q35 2 40 4 Q45 6 44 12" fill="none" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
+                            <!-- Dress bodice -->
+                            <path d="M26 30 L22 48 L35 52 L48 48 L44 30 L40 28 L35 32 L30 28 Z" fill="rgba(201,168,76,0.55)"/>
+                            <!-- Neckline -->
+                            <path d="M30 28 Q35 34 40 28" fill="none" stroke="rgba(201,168,76,0.7)" stroke-width="0.8"/>
+                            <!-- Dress skirt -->
+                            <path d="M22 48 L12 115 L58 115 L48 48 Z" fill="rgba(201,168,76,0.4)"/>
+                            <!-- Skirt flow lines -->
+                            <path d="M28 60 L22 115" fill="none" stroke="rgba(201,168,76,0.15)" stroke-width="0.5"/>
+                            <path d="M42 60 L48 115" fill="none" stroke="rgba(201,168,76,0.15)" stroke-width="0.5"/>
+                            <path d="M35 52 L35 115" fill="none" stroke="rgba(201,168,76,0.1)" stroke-width="0.5"/>
+                            <!-- Waist belt -->
+                            <path d="M22 48 L48 48" stroke="rgba(201,168,76,0.7)" stroke-width="1.2"/>
+                            <!-- Necklace -->
+                            <circle cx="35" cy="27" r="1.2" fill="rgba(201,168,76,0.8)"/>
+                        </svg>
+                        <p class="dresscode-figure-label">Dama</p>
+                    </div>
                 </div>
             </div>
         </div>
